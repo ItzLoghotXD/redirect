@@ -1,17 +1,24 @@
 <html>
-<head>
-    <title>Redirect Page</title>
-    <script type="text/javascript">
-        window.onload = function() {
-            var urlParams = new URLSearchParams(window.location.search);
-            var redirect = urlParams.get('redirect');
-            if (redirect) {
-                window.location.href = redirect;
-            }
-        }
-    </script>
-</head>
 <body>
-    <h1>Welcome to the Redirect Page</h1>
+
+<script>
+window.onload = function() {
+    var urlParams = new URLSearchParams(window.location.search);
+    var redirect = urlParams.get('r');
+
+    var redirectMap = {
+        'value1': 'https://www.example1.com',
+        'value2': 'https://www.example2.com',
+        // Add more mappings as needed
+    };
+
+    if (redirect && redirectMap[redirect]) {
+        window.location.href = redirectMap[redirect];
+    } else {
+        window.location.href = 'https://itzloghotxd.github.io/r/';
+    }
+}
+</script>
+
 </body>
 </html>
