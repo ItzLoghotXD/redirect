@@ -1,0 +1,17 @@
+<html>
+<head>
+    <title>Redirect Page</title>
+    <script type="text/javascript">
+        window.onload = function() {
+            var urlParams = new URLSearchParams(window.location.search);
+            var redirect = urlParams.get('redirect');
+            if (redirect) {
+                window.location.href = redirect;
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Welcome to the Redirect Page</h1>
+</body>
+</html>
