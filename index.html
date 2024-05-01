@@ -1,30 +1,24 @@
-<!DOCTYPE html>
 <html>
 <body>
 
-<h2>Signup Form</h2>
+<script>
+window.onload = function() {
+    var urlParams = new URLSearchParams(window.location.search);
+    var redirect = urlParams.get('r');
 
-<form id="signupForm" action="https://itzloghotxd.github.io/r/signup" method="post">
-  <label for="fname">First Name:</label><br>
-  <input type="text" id="fname" name="fname"><br>
-  <label for="lname">Last Name:</label><br>
-  <input type="text" id="lname" name="lname"><br>
-  <label for="email">Email:</label><br>
-  <input type="email" id="email" name="email"><br>
-  <label for="pwd">Password:</label><br>
-  <input type="password" id="pwd" name="pwd"><br>
-  <input type="submit" value="Submit">
-</form> 
+    var redirectMap = {
+        'youtube': 'https://youtube.com/@LoghotGamerzOfficial',
+        'discord': 'https://discord.com/invite/nvERA6TFs3',
+        '860p1d': 'https://www.coinpayu.com/?r=LoghotGamerz'
+    };
 
-<h2>Login Form</h2>
-
-<form id="loginForm" action="https://itzloghotxd.github.io/r/login" method="post">
-  <label for="loginEmail">Email:</label><br>
-  <input type="email" id="loginEmail" name="email"><br>
-  <label for="loginPwd">Password:</label><br>
-  <input type="password" id="loginPwd" name="pwd"><br>
-  <input type="submit" value="Submit">
-</form> 
+    if (redirect && redirectMap[redirect]) {
+        window.location.href = redirectMap[redirect];
+    } else {
+        window.location.href = 'https://itzloghotxd.github.io/r/';
+    }
+}
+</script>
 
 </body>
 </html>
