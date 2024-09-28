@@ -1,0 +1,14 @@
+function generateString(pattern) {
+    const characters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-_';
+    let result = '';
+
+    for (let i = 0; i < 11; i++) { // Adjust the length as needed
+        const randomIndex = Math.floor(Math.random() * characters.length);
+        result += characters[randomIndex];
+    }
+    return result;
+}
+
+// Example usage
+const generatedString = generateString();
+console.log(generatedString); // Outputs a random string of 11 characters
